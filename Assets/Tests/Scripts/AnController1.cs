@@ -33,10 +33,10 @@ public class AnimationController : MonoBehaviour
     public void Animation(int sequencePostion)
     {
         playerAnimator.SetInteger("Sequence", sequencePosition);
-        StartCoroutine(Idle(sequencePosition));
+        StartCoroutine(Idle());
     }
 
-    IEnumerator Idle(int sequencePosition)
+    IEnumerator Idle()
     {
         yield return new WaitForSeconds(playerAnimator.GetCurrentAnimatorStateInfo(0).length);
         playerAnimator.SetInteger("Sequence", 0);
