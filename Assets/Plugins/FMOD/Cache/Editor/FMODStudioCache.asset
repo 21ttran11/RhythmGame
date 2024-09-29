@@ -327,6 +327,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 56888
+--- !u!114 &-5943121772722302383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background
+  m_EditorClassIdentifier: 
+  Path: event:/Background
+  Guid:
+    Data1: -411063799
+    Data2: 1123251266
+    Data3: -268098163
+    Data4: 925390814
+  Banks:
+  - {fileID: 5922279600169072135}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 198528
 --- !u!114 &-5645427190814547301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,13 +854,15 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 5818558132022595324}
   - {fileID: 9036920593895279077}
-  EditorEvents: []
+  - {fileID: 5922279600169072135}
+  EditorEvents:
+  - {fileID: -5943121772722302383}
   EditorParameters: []
   MasterBanks:
   - {fileID: 9036920593895279077}
   StringsBanks:
   - {fileID: 5818558132022595324}
-  cacheTime: 638629894900828758
+  cacheTime: 638631548593275127
   cacheVersion: 131620
 --- !u!114 &970279336234983239
 MonoBehaviour:
@@ -1339,10 +1368,30 @@ MonoBehaviour:
   Path: ../../FMOD Studio/RhythmGame/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638629894900828758
+  lastModified: 638631548592505590
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 806
+  Exists: 1
+--- !u!114 &5922279600169072135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Studio/RhythmGame/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638631548593275127
+  FileSizes:
+  - Name: Desktop
+    Value: 2584832
   Exists: 1
 --- !u!114 &6068895101576312321
 MonoBehaviour:
@@ -1658,7 +1707,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/RhythmGame/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638629894900778805
+  lastModified: 638631548592475606
   FileSizes:
   - Name: Desktop
     Value: 1036
