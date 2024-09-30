@@ -8,7 +8,7 @@ public class BackgroundMusic : MonoBehaviour
     void Start()
     {
         // Replace this path with your event path from FMOD Studio
-        musicInstance = RuntimeManager.CreateInstance("event:/Music/Background");
+        musicInstance = RuntimeManager.CreateInstance("event:/Background");
 
         // Start playing the background music
         musicInstance.start();
