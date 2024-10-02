@@ -9,21 +9,20 @@ public class BackgroundMusic : MonoBehaviour
     private int timelinePosition;
     private FMOD.Studio.EVENT_CALLBACK timelineCallback;
 
-    public GameObject beatSpawnerObj;
-    private BeatSpawner beatSpawner;
+    public GameObject beatSpawnerObj; // gameobject that holds the gameobject in the scene with the beat spawner script
+    private BeatSpawner beatSpawner; // variable of type beat spawner referencing the beat spawner script 
 
     void Start()
     {
-        beatSpawner = beatSpawnerObj.GetComponent<BeatSpawner>();
+        beatSpawner = beatSpawnerObj.GetComponent<BeatSpawner>(); // grab the beat spawner script component from the game object 
 
-        // Replace this path with your event path from FMOD Studio
-        musicInstance = RuntimeManager.CreateInstance("event:/Background");
+        musicInstance = RuntimeManager.CreateInstance("event:/Background"); // path to the event in fmod 
 
         //Set up the timeline callback
         timelineCallback = new FMOD.Studio.EVENT_CALLBACK(TimelineMarkerCallback);
-        musicInstance.setCallback(timelineCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
+        musicInstance.setCallback(timelineCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER); // grabs the markers in the fmod files
         // Start playing the background music
-        musicInstance.start();
+        musicInstance.start(); 
     }
 
     private FMOD.RESULT TimelineMarkerCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr)
