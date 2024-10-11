@@ -55,14 +55,7 @@ public class An2Controller : MonoBehaviour
 
     public void PlayAnimation()
     {
-        if(seconds%2 == 0)
-        {
-            lobsterAnimator.Play("Attack");
-        }
-        else
-        {
-            lobsterAnimator.Play("Attacked");
-        }
+        lobsterAnimator.Play("Attack");
     }
 
     public void ReturnIdle()
