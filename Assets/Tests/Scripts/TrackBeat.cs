@@ -96,15 +96,6 @@ class ScriptUsageTimeline : MonoBehaviour
                         MarkerAction(parameter.name);
                         break;
                     }
-                case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER_RANGE:
-                    {
-                        var parameter = (FMOD.Studio.TIMELINE_MARKER_RANGE_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_RANGE_PROPERTIES));
-                        Debug.Log($"Entered marker range: {parameter.name}");
-
-                        // You can trigger actions when entering/exiting the marker range
-                        MarkerRangeAction(parameter.name, true); // true for entering
-                        break;
-                    }
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.DESTROYED: 
                     {
                         // Now the event has been destroyed, unpin the timeline memory so it can be garbage collected

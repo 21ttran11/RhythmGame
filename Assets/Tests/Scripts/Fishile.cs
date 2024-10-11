@@ -5,13 +5,27 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class Fishile : MonoBehaviour
 {
-    public float speed;
-    private Transform lobster;
+    private float speed;
+    private Transform claws;
+    private float distance;
+
+    [SerializeField]
+    private float beatsPerMinute;
+
+    private float beatsPerSecond;
+
+    private float secondsBetweenBeats;
 
     // Start is called before the first frame update
     void Start()
     {
-        lobster = GameObject.FindWithTag("Lobster").transform;
+        claws = GameObject.FindWithTag("Claws").transform;
+        distance = transform.position.x - claws.position.x;
+
+        beatsPerSecond = beatsPerMinute / 60;
+        secondsBetweenBeats = 1 / beatsPerSecond;
+
+        speed = distance / secondsBetweenBeats;
     }
 
     // Update is called once per frame
@@ -22,8 +36,8 @@ public class Fishile : MonoBehaviour
 
     public void Move()
     {
-        Vector2 direction = (lobster.position - transform.position).normalized;
-        Vector2 position = (Vector2)lobster.position - direction;
-        transform.position = Vector2.MoveTowards(transform.position, position, speed * Time.deltaTime);
+        // Move towards the claws with speed calculated earlier
+        Vector2 direction = (claws.position - transform.position).normalized;
+        transform.position = Vector2.MoveTowards(transform.position, claws.position, speed * Time.deltaTime);
     }
 }

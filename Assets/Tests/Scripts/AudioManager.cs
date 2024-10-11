@@ -12,11 +12,13 @@ public class BackgroundMusic : MonoBehaviour
     public GameObject beatSpawnerObj; // gameobject that holds the gameobject in the scene with the beat spawner script
     private BeatSpawner beatSpawner; // variable of type beat spawner referencing the beat spawner script 
 
+    public FMODUnity.EventReference EventName;
+
     void Start()
     {
         beatSpawner = beatSpawnerObj.GetComponent<BeatSpawner>(); // grab the beat spawner script component from the game object 
 
-        musicInstance = RuntimeManager.CreateInstance("event:/Background"); // path to the event in fmod 
+        musicInstance = RuntimeManager.CreateInstance(EventName); // path to the event in fmod 
 
         //Set up the timeline callback
         timelineCallback = new FMOD.Studio.EVENT_CALLBACK(TimelineMarkerCallback);
@@ -32,15 +34,21 @@ public class BackgroundMusic : MonoBehaviour
         if (type == FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER)
         {
             var marker = (FMOD.Studio.TIMELINE_MARKER_PROPERTIES)System.Runtime.InteropServices.Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_PROPERTIES));
-            Debug.Log("Marker Reached");
 
-            if (beatSpawner != null)
+            // Convert the name of the marker to a regular string
+            string markerName = marker.name;
+            Debug.Log("Marker Reached: " + markerName);
+
+            if (markerName == "SpawnBeat")
             {
-                beatSpawner.Spawn();
-            }
-            else
-            {
-                Debug.LogError("BeatSpawner not set!");
+                if (beatSpawner != null)
+                {
+                    beatSpawner.Spawn();
+                }
+                else
+                {
+                    Debug.LogError("BeatSpawner not set!");
+                }
             }
         }
 
