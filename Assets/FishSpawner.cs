@@ -22,8 +22,8 @@ public class FishSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(interval);
-            //creates the new fish at the same point
-            GameObject newFish = Instantiate(fish, new Vector3(0, 0, 0), Quaternion.identity);
+            //creates the new fish at the same point (out of the whale's mouth)
+            GameObject newFish = Instantiate(fish, new Vector3(8, 0, 0), Quaternion.identity);
         }
     }
 }
