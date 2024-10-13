@@ -31,10 +31,10 @@ public class fishController : MonoBehaviour
     void Update()
     {
         //destroys the fish if it goes out of bounds
-        if (transform.position.x < -10 || transform.position.x > 10 || transform.position.y < -10 || transform.position.y > 10)
+        if (transform.position.x < -10 || transform.position.x > 10 || transform.position.y < -4 || transform.position.y > 4)
         {
             //plays the spinning out animation
-            PlayRandomAnimation();
+            Destroy(gameObject);
         }
 
         transform.Translate(Vector2.right * -fishSpeed * Time.deltaTime);
@@ -45,7 +45,7 @@ public class fishController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayRandomAnimation();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
@@ -62,4 +62,3 @@ public class fishController : MonoBehaviour
         }
     }
 }
-
