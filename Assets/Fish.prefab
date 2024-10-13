@@ -48,9 +48,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1997e2d043158934789200a01cfa5b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishSpeed: 0
+  fishSpeed: 10
   fishSpawnLocation: {x: 0, y: 0}
-  fishAnimations: []
+  fishAnimations:
+  - spin out 1
+  - spin out 2
+  - spin out 3
+  - spin out 4
 --- !u!212 &2159454001778308293
 SpriteRenderer:
   m_ObjectHideFlags: 0

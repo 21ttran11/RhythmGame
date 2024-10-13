@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class fishController : MonoBehaviour
@@ -16,15 +17,15 @@ public class fishController : MonoBehaviour
     List<string> fishAnimations;
 
     //added reference to animator
-    Animator animator;
+    Animator animate;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = fishSpawnLocation;
+        //transform.position = fishSpawnLocation;
         
         //add animator component to the fish
-        animator = GetComponent<Animator>();
+        animate = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class fishController : MonoBehaviour
             Destroy(gameObject);
         }
 
-       //transform.Translate(Vector2.right * -fishSpeed * Time.deltaTime);
+       transform.Translate(Vector2.left * fishSpeed);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -55,10 +56,11 @@ public class fishController : MonoBehaviour
         {
             //choose a random spin out animation from the list based on the trigger names
             int randomAnimation = Random.Range(0, fishAnimations.Count);
-            string triggerName = fishAnimations[randomAnimation];
+            string animation = fishAnimations[randomAnimation];
 
             //play the animation based on the random trigger name
-            animator.SetTrigger(triggerName);
+
+            animate.Play(animation);
         }
     }
 }
