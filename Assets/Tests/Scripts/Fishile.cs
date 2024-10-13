@@ -23,9 +23,9 @@ public class Fishile : MonoBehaviour
         distance = transform.position.x - claws.position.x;
 
         beatsPerSecond = beatsPerMinute / 60;
-        secondsBetweenBeats = 1 / (4 * beatsPerSecond);
+        secondsBetweenBeats = 1 / beatsPerSecond;
 
-        speed = distance / secondsBetweenBeats;
+        speed = distance / (4 * secondsBetweenBeats);
     }
 
     // Update is called once per frame
