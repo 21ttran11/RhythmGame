@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    private string Name;
     public void PlayGame()
     {
-        SceneManager.LoadScene("AnimationsWIP"); // will load the game/change scenes when play is pressed
+        SceneManager.LoadScene(Name); // will load the game/change scenes when play is pressed
     }
 }
