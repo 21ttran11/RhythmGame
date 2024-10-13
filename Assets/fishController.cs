@@ -37,7 +37,7 @@ public class fishController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        transform.Translate(Vector2.right * -fishSpeed * Time.deltaTime);
+       //transform.Translate(Vector2.right * -fishSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
