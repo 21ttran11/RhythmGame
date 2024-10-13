@@ -23,7 +23,7 @@ public class Fishile : MonoBehaviour
         distance = transform.position.x - claws.position.x;
 
         beatsPerSecond = beatsPerMinute / 60;
-        secondsBetweenBeats = 1 / beatsPerSecond;
+        secondsBetweenBeats = 1 / (4 * beatsPerSecond);
 
         speed = distance / secondsBetweenBeats;
     }

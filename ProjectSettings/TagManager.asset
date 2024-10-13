@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Lobster
   - Spawner
+  - Claws
   layers:
   - Default
   - TransparentFX
