@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{77230691-a7c0-4092-a17b-e5348f8cb75a}">
+		<property name="assetPath">
+			<value>lobster_song_full.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>169.78929705215418</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{eba5171d-e8ff-4b83-a50c-44e94d8b036b}</destination>
+		</relationship>
+	</object>
+</objects>
