@@ -373,7 +373,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 0.2, z: 0}
-  m_LocalScale: {x: 0.5, y: 2, z: 1}
+  m_LocalScale: {x: 0.8, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1086,6 +1086,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {fileID: 1936233372}
   beat: {fileID: 3455934324664396441, guid: 608a34ebbdadd0845ba2299c5f700c87, type: 3}
+  EventName:
+    Guid:
+      Data1: -1333847537
+      Data2: 1192238165
+      Data3: 1874373311
+      Data4: -1957679651
+    Path: event:/SpawnSFX
 --- !u!1 &1976005530
 GameObject:
   m_ObjectHideFlags: 0

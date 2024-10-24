@@ -6,6 +6,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class Fishile : MonoBehaviour
 {
     private float speed;
+    private Transform hitbox;
     private Transform claws;
     private float distance;
 
@@ -19,8 +20,9 @@ public class Fishile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        claws = GameObject.FindWithTag("Hitbox").transform;
-        distance = transform.position.x - (claws.position.x);
+        hitbox = GameObject.FindWithTag("Hitbox").transform;
+        claws = GameObject.FindWithTag("Claws").transform;
+        distance = transform.position.x - (hitbox.position.x);
 
         beatsPerSecond = beatsPerMinute / 60;
 

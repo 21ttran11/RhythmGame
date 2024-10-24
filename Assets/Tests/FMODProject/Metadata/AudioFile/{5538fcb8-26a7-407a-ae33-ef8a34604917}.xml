@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5538fcb8-26a7-407a-ae33-ef8a34604917}">
+		<property name="assetPath">
+			<value>spawn_sfx.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.032</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{62c15935-d8b3-44ff-aa2d-dc1ebcee2fd4}</destination>
+		</relationship>
+	</object>
+</objects>

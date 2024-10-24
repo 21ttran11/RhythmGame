@@ -761,6 +761,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-678775351828320821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Tests/FMODProject/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638653634106761001
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-671012296295230742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,14 +845,16 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 7859524078657574345}
   - {fileID: 4281348145487867720}
+  - {fileID: -678775351828320821}
   EditorEvents:
   - {fileID: 5795765782425068257}
+  - {fileID: 4494942705930905423}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4281348145487867720}
   StringsBanks:
   - {fileID: 7859524078657574345}
-  cacheTime: 638653150167285053
+  cacheTime: 638653638568033652
   cacheVersion: 131620
 --- !u!114 &970279336234983239
 MonoBehaviour:
@@ -1237,9 +1257,36 @@ MonoBehaviour:
   Path: Assets/Tests/FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638653150167255050
+  lastModified: 638653638568013640
   FileSizes: []
   Exists: 1
+--- !u!114 &4494942705930905423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SpawnSFX
+  m_EditorClassIdentifier: 
+  Path: event:/SpawnSFX
+  Guid:
+    Data1: -1333847537
+    Data2: 1192238165
+    Data3: 1874373311
+    Data4: -1957679651
+  Banks:
+  - {fileID: -678775351828320821}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4598246130813286092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,7 +1416,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 169317
+  Length: 169789
 --- !u!114 &6068895101576312321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,10 +1677,10 @@ MonoBehaviour:
   Path: Assets/Tests/FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638653150167285053
+  lastModified: 638653638568033652
   FileSizes:
   - Name: 
-    Value: 756
+    Value: 854
   Exists: 1
 --- !u!114 &8028836500530554285
 MonoBehaviour:

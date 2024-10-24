@@ -24,7 +24,7 @@ class ScriptUsageTimeline : MonoBehaviour
 #if UNITY_EDITOR
     void Reset()
     {
-        EventName = FMODUnity.EventReference.Find("event:/Background");
+        EventName = FMODUnity.EventReference.Find("event:/BeatMap");
     }
 #endif
 
