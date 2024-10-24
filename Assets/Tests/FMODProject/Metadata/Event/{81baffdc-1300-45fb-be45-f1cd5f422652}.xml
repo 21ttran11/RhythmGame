@@ -79,6 +79,7 @@
 			<destination>{4ce01ca5-55e3-442b-a40f-2448daf2f11c}</destination>
 			<destination>{7696e7b4-231a-4b48-b62d-190d689cd0f9}</destination>
 			<destination>{ab8550c8-b6a9-4d36-9dbd-8ed344f4cf2c}</destination>
+			<destination>{b03c5df7-c5c7-4e14-af00-e08a0f24f54f}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{774815d1-2d94-46a0-92ee-56529b80ce7a}">
@@ -196,6 +197,20 @@
 		</property>
 		<property name="name">
 			<value>SpawnBeat</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{f40e36c7-d0a5-4901-a5d1-a29083162437}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{315b2053-6476-4e38-b964-f56933ef3ea2}</destination>
+		</relationship>
+	</object>
+	<object class="NamedMarker" id="{b03c5df7-c5c7-4e14-af00-e08a0f24f54f}">
+		<property name="position">
+			<value>10.971428571428572</value>
+		</property>
+		<property name="name">
+			<value>Stop</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{f40e36c7-d0a5-4901-a5d1-a29083162437}</destination>

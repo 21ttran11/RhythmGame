@@ -117,6 +117,10 @@ class ScriptUsageTimeline : MonoBehaviour
             case "CutScene": //if marker is cutscene
                 Debug.Log("Cut scene trigger"); //trigger the cutscene
                 break;
+            case "Stop":
+                musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                musicInstance.release();
+                break;
         }
     }
 

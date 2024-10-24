@@ -7,6 +7,8 @@ TagManager:
   - Lobster
   - Spawner
   - Claws
+  - Fish
+  - Hitbox
   layers:
   - Default
   - TransparentFX
