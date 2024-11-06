@@ -5,10 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lobster
-  - Spawner
-  - Claws
-  - Fish
-  - Hitbox
   layers:
   - Default
   - TransparentFX
