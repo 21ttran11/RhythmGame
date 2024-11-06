@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcdcf5b9860575143be560711ff73837
+guid: 6d4f0347fbada4fecb99fb2992cdb240
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
+    textureFormat: -1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,85 +123,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: whalesharkBOTTOM_0
+      name: lobster_down_attack_0
       rect:
         serializedVersion: 2
-        x: 883
-        y: 602
-        width: 19
-        height: 18
+        x: 614
+        y: 285
+        width: 584
+        height: 510
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0e71e734a2266843bac2e90672fc095
-      internalID: -513696141
+      spriteID: 7f03f035104044301a71e1fe7ac3d55b
+      internalID: -657573920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: whalesharkBOTTOM_1
+      name: lobster_down_attack_1
       rect:
         serializedVersion: 2
-        x: 791
-        y: 551
-        width: 29
-        height: 22
+        x: 2523
+        y: 200
+        width: 519
+        height: 595
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdcf5d774b415964f8b0c7d38e6c2ee8
-      internalID: -141949624
+      spriteID: d97c690c474924eb2badfddbe10ce48a
+      internalID: -126305215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: whalesharkBOTTOM_2
+      name: lobster_down_attack_2
       rect:
         serializedVersion: 2
-        x: 432
-        y: 465
-        width: 23
-        height: 8
+        x: 4433
+        y: 167
+        width: 512
+        height: 634
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 401300a0329bc0e439ed673fcc706be9
-      internalID: -1490771436
+      spriteID: e08cde269019b4c408b10de2951fca0f
+      internalID: -1273792050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: whalesharkBOTTOM_3
+      name: lobster_down_attack_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 171
-        width: 717
-        height: 262
+        x: 6356
+        y: 169
+        width: 511
+        height: 626
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84fb25cfc9216e3449b922f907d1db94
-      internalID: 1363407872
+      spriteID: 13620df8ad3ee42bab630e5bfea3d641
+      internalID: -2105575006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lobster_down_attack_4
+      rect:
+        serializedVersion: 2
+        x: 8279
+        y: 167
+        width: 505
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4f31fe8f98744b6886ef5e0f4091ec
+      internalID: -1538503509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lobster_down_attack_5
+      rect:
+        serializedVersion: 2
+        x: 10195
+        y: 193
+        width: 499
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1758820bff404b46b24dfde6a408826
+      internalID: 239116124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lobster_down_attack_6
+      rect:
+        serializedVersion: 2
+        x: 12111
+        y: 272
+        width: 570
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ababf7631f74753b5600729f55b8a6
+      internalID: 1945014179
       vertices: []
       indices: 
       edges: []
@@ -217,10 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      whalesharkBOTTOM_0: -513696141
-      whalesharkBOTTOM_1: -141949624
-      whalesharkBOTTOM_2: -1490771436
-      whalesharkBOTTOM_3: 1363407872
+      lobster_down_attack_0: -657573920
+      lobster_down_attack_1: -126305215
+      lobster_down_attack_2: -1273792050
+      lobster_down_attack_3: -2105575006
+      lobster_down_attack_4: -1538503509
+      lobster_down_attack_5: 239116124
+      lobster_down_attack_6: 1945014179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
