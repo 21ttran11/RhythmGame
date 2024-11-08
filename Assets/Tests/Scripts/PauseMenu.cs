@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PauseMenu : MonoBehaviour
 {
 
-public GameObject pauseMenu;
-public bool isPaused;
+    public GameObject pauseMenu;
+    public bool isPaused;
+    public UnityEvent paused;
 
     // Start is called before the first frame update
     void Start()
     {
+        paused = new UnityEvent();
+        paused.Invoke();
         pauseMenu.SetActive(false);
     }
     // Update is called once per frame
@@ -27,6 +31,7 @@ public bool isPaused;
                 PauseGame();
             }
         }
+        
     }
     public void PauseGame()
     {

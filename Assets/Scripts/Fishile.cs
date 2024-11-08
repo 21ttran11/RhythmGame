@@ -15,8 +15,6 @@ public class Fishile : MonoBehaviour
 
     private float beatsPerSecond;
 
-    private float secondsBetweenBeats;
-
 
     // Start is called before the first frame update
     void Start()

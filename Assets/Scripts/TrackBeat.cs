@@ -3,7 +3,7 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-class ScriptUsageTimeline : MonoBehaviour
+public class ScriptUsageTimeline : MonoBehaviour
 {
     class TimelineInfo // information that shows in fmod's ui
     {
@@ -125,9 +125,8 @@ class ScriptUsageTimeline : MonoBehaviour
         }
     }
 
-    private void OnApplicationQuit()
+    public void PauseMusic(bool pause)
     {
-        musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        musicInstance.release();
+        musicInstance.setPaused(pause);
     }
 }
