@@ -17,6 +17,7 @@ public class Fishile : MonoBehaviour
 
     private float secondsBetweenBeats;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class Fishile : MonoBehaviour
         beatsPerSecond = beatsPerMinute / 60;
 
         speed = distance / beatsPerSecond;
+
     }
 
     // Update is called once per frame
@@ -41,4 +43,5 @@ public class Fishile : MonoBehaviour
         Vector2 direction = (claws.position - transform.position).normalized;
         transform.position = Vector2.MoveTowards(transform.position, claws.position, speed * Time.deltaTime);
     }
+
 }
