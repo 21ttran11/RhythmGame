@@ -7,13 +7,7 @@ public class AnimationHandler : MonoBehaviour
     [SerializeField]
     public Animator lobsterAnimator;
 
-    private bool hitDown = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        lobsterAnimator = gameObject.GetComponent<Animator>();
-    }
+    private bool hitDown = true;
 
     // Update is called once per frame
     void Update()
@@ -26,14 +20,14 @@ public class AnimationHandler : MonoBehaviour
 
     public void PlayAnimation()
     {
-        if (hitDown == false)
+        if (hitDown)
         {
-            lobsterAnimator.Play("HitDown");
-            hitDown = true;
-        }
-        else if (hitDown){
             lobsterAnimator.Play("HitUp");
             hitDown = false;
+        }
+        else if (!hitDown){
+            lobsterAnimator.Play("HitDown");
+            hitDown = true;
         }
     }
 

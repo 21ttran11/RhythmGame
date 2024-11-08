@@ -8,11 +8,6 @@ public class FishDestroyer : MonoBehaviour
     public Animator lobsterAnimator;
     private GameObject localFish;
 
-    void Start()
-    {
-        lobsterAnimator = gameObject.GetComponent<Animator>();
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         lobsterAnimator.Play("Attacked");
