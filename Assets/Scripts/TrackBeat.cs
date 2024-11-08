@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -124,8 +125,9 @@ class ScriptUsageTimeline : MonoBehaviour
         }
     }
 
-    void MarkerRangeAction(string MarkerName)
+    private void OnApplicationQuit()
     {
-
+        musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        musicInstance.release();
     }
 }

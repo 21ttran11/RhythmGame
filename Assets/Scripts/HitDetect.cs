@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HitDetect : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class HitDetect : MonoBehaviour
     private GameObject localFish;
     private float score = 0.0f;
     private float tScore = 0.0f;
+    public TMP_Text scoreText;
+
+    public 
 
 
     // Start is called before the first frame update
@@ -41,9 +45,10 @@ public class HitDetect : MonoBehaviour
                 timer = 0;
             }
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+        scoreText.text =  tScore.ToString();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Fish"))
         {
