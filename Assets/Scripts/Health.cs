@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Health : MonoBehaviour
+/* public class Health : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> hearts;
@@ -35,3 +35,4 @@ public class Health : MonoBehaviour
         i++;
     }
 }
+ */
