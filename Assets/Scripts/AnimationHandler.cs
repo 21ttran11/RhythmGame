@@ -31,8 +31,13 @@ public class AnimationHandler : MonoBehaviour
         }
     }
 
-    public void ReturnIdle()
+    public void IdleDown()
     {
-        lobsterAnimator.Play("Idle");
+        lobsterAnimator.Play("IdleDown");
+    }
+
+    public void IdleUp()
+    {
+        lobsterAnimator.Play("IdleUp");
     }
 }
