@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        if(i  == 3){
+        if(i  == hearts.Count){
             alive = false;
             Debug.Log("game over");
             Time.timeScale = 0f;
