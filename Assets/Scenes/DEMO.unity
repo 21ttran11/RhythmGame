@@ -1097,6 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lobsterAnimator: {fileID: 813027401}
+  miss: {fileID: 2621076519775837329, guid: 3b10ee7afc6197c4da70d8992b9af9a4, type: 3}
   attacked:
     m_PersistentCalls:
       m_Calls:
@@ -2562,7 +2563,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2618,6 +2619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1480377305}
+  perfect: {fileID: 4402316002706387470, guid: 6a4b454040d230f4c88fcb4b243d068e, type: 3}
 --- !u!212 &2108944338
 SpriteRenderer:
   m_ObjectHideFlags: 0
