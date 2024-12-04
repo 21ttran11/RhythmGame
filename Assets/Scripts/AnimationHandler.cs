@@ -20,14 +20,21 @@ public class AnimationHandler : MonoBehaviour
 
     public void PlayAnimation()
     {
-        if (hitDown)
+        if (CompareTag("Lobster2"))
         {
-            lobsterAnimator.Play("HitUp");
-            hitDown = false;
+            lobsterAnimator.Play("Attack");
         }
-        else if (!hitDown){
-            lobsterAnimator.Play("HitDown");
-            hitDown = true;
+        else
+        {
+            if (hitDown)
+            {
+                lobsterAnimator.Play("HitUp");
+                hitDown = false;
+            }
+            else if (!hitDown){
+                lobsterAnimator.Play("HitDown");
+                hitDown = true;
+            }
         }
     }
 
@@ -39,5 +46,10 @@ public class AnimationHandler : MonoBehaviour
     public void IdleUp()
     {
         lobsterAnimator.Play("IdleUp");
+    }
+
+    public void Idle()
+    {
+        lobsterAnimator.Play("Idle");
     }
 }

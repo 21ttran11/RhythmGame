@@ -16,6 +16,9 @@ public class HitDetect : MonoBehaviour
     [SerializeField]
     private GameObject perfect;
 
+    [SerializeField]
+    private GameObject okay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +38,15 @@ public class HitDetect : MonoBehaviour
                 fishHit = false;
                 Destroy(localFish);
                 score = (400f - (0.1f * Mathf.Pow(((float)timer - 60f), 2f)));
-                Instantiate(perfect);
+
+                if (score >= 300f && score <= 400f)
+                {
+                    Instantiate(perfect);
+                }
+                else
+                {
+                    Instantiate(okay);
+                }
                 tScore += score;
                 timer = 0;
             }
