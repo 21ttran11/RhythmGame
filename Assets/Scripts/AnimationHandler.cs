@@ -9,6 +9,8 @@ public class AnimationHandler : MonoBehaviour
 
     private bool hitDown = true;
 
+    private GameObject scene1;
+
     // Update is called once per frame
     void Update()
     {
@@ -52,4 +54,5 @@ public class AnimationHandler : MonoBehaviour
     {
         lobsterAnimator.Play("Idle");
     }
+
 }
