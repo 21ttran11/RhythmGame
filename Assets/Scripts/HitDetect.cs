@@ -35,6 +35,7 @@ public class HitDetect : MonoBehaviour
                 Destroy(localFish);
                 score = (400f - (0.1f * Mathf.Pow(((float)timer - 60f), 2f)));
                 tScore += score;
+                StaticData.score = tScore;
                 timer = 0;
             }
             if (timer > 120)

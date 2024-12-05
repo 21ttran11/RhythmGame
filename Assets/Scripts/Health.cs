@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-/* public class Health : MonoBehaviour
+public class Health : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> hearts;
@@ -25,6 +26,8 @@ using UnityEngine.UIElements;
             alive = false;
             Debug.Log("game over");
             Time.timeScale = 0f;
+            StaticData.won = false;
+            SceneManager.LoadScene("End Scene");
         }
     }
     public void updateHeart()
@@ -35,4 +38,3 @@ using UnityEngine.UIElements;
         i++;
     }
 }
- */
