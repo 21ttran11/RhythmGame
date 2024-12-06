@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f22631f2ed577439c10a67f23a5d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobsterAnimator: {fileID: 0}
+  lobsterAnimator: {fileID: 1903157299}
   miss: {fileID: 2621076519775837329, guid: 3b10ee7afc6197c4da70d8992b9af9a4, type: 3}
   attacked:
     m_PersistentCalls:
@@ -1798,7 +1798,7 @@ Transform:
   m_GameObject: {fileID: 813027398}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.32, y: -0.26, z: 0.045646336}
+  m_LocalPosition: {x: -6, y: -1.72, z: 0.045646336}
   m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
   m_ConstrainProportionsScale: 1
   m_Children:

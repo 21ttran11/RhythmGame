@@ -2,6 +2,7 @@ using FMODUnity;
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScriptUsageTimeline : MonoBehaviour
 {
@@ -124,6 +125,8 @@ public class ScriptUsageTimeline : MonoBehaviour
             case "Stop":
                 musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 musicInstance.release();
+                StaticData.won = true;
+                SceneManager.LoadScene("End Scene");
                 break;
         }
     }
