@@ -37,12 +37,35 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;  //pause physics updates
+        AudioListener.pause = true;
+
+        //pause all animations
+        Animator[] animators = FindObjectsOfType<Animator>();
+        foreach (Animator animator in animators)
+        {
+            animator.speed = 0f;
+        }
+
+        StopAllCoroutines();
         isPaused = true;
     }
+
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.02f; //resume game physics
+
+        AudioListener.pause = false;
+
+        //sesume all animations
+        Animator[] animators = FindObjectsOfType<Animator>();
+        foreach (Animator animator in animators)
+        {
+            animator.speed = 1f;
+        }
+        
         isPaused = false;
     }
 }
