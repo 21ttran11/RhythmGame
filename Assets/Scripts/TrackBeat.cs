@@ -19,6 +19,8 @@ public class ScriptUsageTimeline : MonoBehaviour
     public GameObject beatSpawnerObj;
     private BeatSpawner beatSpawner;
 
+    public GameObject win;
+
     FMOD.Studio.EVENT_CALLBACK beatCallback;
     FMOD.Studio.EventInstance musicInstance;
 
@@ -36,7 +38,7 @@ public class ScriptUsageTimeline : MonoBehaviour
         timelineInfo = new TimelineInfo();
 
         beatSpawner = beatSpawnerObj.GetComponent<BeatSpawner>();
-
+        
 
         // Explicitly create the delegate object and assign it to a member so it doesn't get freed
         // by the garbage collected while it's being used
@@ -124,6 +126,9 @@ public class ScriptUsageTimeline : MonoBehaviour
             case "Stop":
                 musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 musicInstance.release();
+                break;
+            case "Win":
+                win.SetActive(true);
                 break;
         }
     }

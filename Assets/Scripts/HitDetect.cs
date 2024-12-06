@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor;
 
 public class HitDetect : MonoBehaviour
 {
@@ -12,6 +11,8 @@ public class HitDetect : MonoBehaviour
     private float score = 0.0f;
     private float tScore = 0.0f;
     public TMP_Text scoreText;
+    public TMP_Text scoreText2;
+    public TMP_Text scoreText3;
 
     [SerializeField]
     private GameObject perfect;
@@ -22,11 +23,19 @@ public class HitDetect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        localFish = GetComponent<GameObject>();
+        // Parse the value from scoreText if it exists
+        if (float.TryParse(scoreText.text, out float initialScore))
+        {
+            tScore = initialScore;
+        }
+        else
+        {
+            Debug.LogWarning("Score text is not a valid number! Defaulting to 0.");
+            tScore = 0.0f;
+        }
     }
 
     // Update is called once per frame
-
     private int timer = 0;
     void Update()
     {
@@ -57,8 +66,12 @@ public class HitDetect : MonoBehaviour
             }
         }
 
-        scoreText.text =  tScore.ToString();
+        // Update both TMP_Text objects with the latest score
+        scoreText.text = tScore.ToString();
+        scoreText2.text = tScore.ToString();
+        scoreText3.text = tScore.ToString();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Fish"))
@@ -67,5 +80,4 @@ public class HitDetect : MonoBehaviour
             localFish = collision.gameObject;
         }
     }
-
 }

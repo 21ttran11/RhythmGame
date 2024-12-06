@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     [SerializeField]
     private List<GameObject> hearts;
 
+    [SerializeField]
+    private GameObject loseScene;
     private SpriteRenderer heartSprite;
     // Start is called before the first frame update
 
@@ -27,6 +29,7 @@ public class Health : MonoBehaviour
             Time.timeScale = 0f;
             FMOD.Studio.Bus masterBus = RuntimeManager.GetBus("bus:/");
             masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            loseScene.SetActive(true);
         }
     }
     public void updateHeart()
