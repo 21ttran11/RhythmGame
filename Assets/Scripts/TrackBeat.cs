@@ -25,7 +25,6 @@ public class ScriptUsageTimeline : MonoBehaviour
     FMOD.Studio.EventInstance musicInstance;
 
     public GameObject cutscene;
-    public GameObject endCutscene;
 
 #if UNITY_EDITOR
     void Reset()
@@ -123,10 +122,6 @@ public class ScriptUsageTimeline : MonoBehaviour
             case "Cutscene": //if marker is cutscene
                 Debug.Log("Cut scene trigger"); //trigger the cutscene
                 cutscene.SetActive(true);
-                break;
-            case "Cutscene End":
-                Debug.Log("Cut scene over");
-                endCutscene.SetActive(true);
                 break;
             case "Stop":
                 musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
