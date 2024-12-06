@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class MainMenu : MonoBehaviour
     private string Name;
     public void PlayGame()
     {
+        FMOD.Studio.Bus masterBus = RuntimeManager.GetBus("bus:/");
+        masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         SceneManager.LoadScene(Name); // will load the game/change scenes when play is pressed
     }
 }

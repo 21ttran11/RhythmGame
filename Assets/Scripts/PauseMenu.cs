@@ -10,16 +10,17 @@ public class PauseMenu : MonoBehaviour
     public bool isPaused;
     public UnityEvent paused;
 
-    [SerializeField]
-    private string fmodEventPath = "event:/BeatMap"; 
+    private FMOD.Studio.Bus masterBus;
 
-    private FMOD.Studio.EventInstance musicEventInstance; // Reference to the FMOD event instance
-
+    // Start is called before the first frame update
     void Start()
     {
         paused = new UnityEvent();
         paused.Invoke();
         pauseMenu.SetActive(false);
+
+        // Get the master bus
+        masterBus = RuntimeManager.GetBus("bus:/");
     }
 
     // Update is called once per frame
@@ -45,8 +46,8 @@ public class PauseMenu : MonoBehaviour
         Time.fixedDeltaTime = 0.02f * Time.timeScale; // Pause physics updates
         AudioListener.pause = true;
 
-        // Pause the FMOD event
-        musicEventInstance.setPaused(true);
+        // Pause the master bus
+        masterBus.setPaused(true);
 
         // Pause all animations
         Animator[] animators = FindObjectsOfType<Animator>();
@@ -67,8 +68,8 @@ public class PauseMenu : MonoBehaviour
 
         AudioListener.pause = false;
 
-        // Resume the FMOD event
-        musicEventInstance.setPaused(false);
+        // Resume the master bus
+        masterBus.setPaused(false);
 
         // Resume all animations
         Animator[] animators = FindObjectsOfType<Animator>();
@@ -78,12 +79,5 @@ public class PauseMenu : MonoBehaviour
         }
 
         isPaused = false;
-    }
-
-    private void OnDestroy()
-    {
-        // Clean up the FMOD event instance when the object is destroyed
-        musicEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        musicEventInstance.release();
     }
 }
