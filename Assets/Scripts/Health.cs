@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Health : MonoBehaviour
@@ -26,7 +27,9 @@ public class Health : MonoBehaviour
             alive = false;
             Time.timeScale = 0f;
             FMOD.Studio.Bus masterBus = RuntimeManager.GetBus("bus:/");
-            masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);            
+            StaticData.won = false;
+            SceneManager.LoadScene("End Scene");
         }
     }
     public void updateHeart()

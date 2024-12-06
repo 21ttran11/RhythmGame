@@ -48,6 +48,7 @@ public class HitDetect : MonoBehaviour
                     Instantiate(okay);
                 }
                 tScore += score;
+                StaticData.score = tScore;
                 timer = 0;
             }
             if (timer > 120)
