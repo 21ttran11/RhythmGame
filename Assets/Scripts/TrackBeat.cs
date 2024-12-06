@@ -22,6 +22,8 @@ public class ScriptUsageTimeline : MonoBehaviour
     FMOD.Studio.EVENT_CALLBACK beatCallback;
     FMOD.Studio.EventInstance musicInstance;
 
+    public GameObject cutscene;
+
 #if UNITY_EDITOR
     void Reset()
     {
@@ -115,8 +117,9 @@ public class ScriptUsageTimeline : MonoBehaviour
             case "SpawnBeat": //if the marker name is spawnbeat
                 beatSpawner.Spawn(); //beat spawner 
                 break;
-            case "CutScene": //if marker is cutscene
+            case "Cutscene": //if marker is cutscene
                 Debug.Log("Cut scene trigger"); //trigger the cutscene
+                cutscene.SetActive(true);
                 break;
             case "Stop":
                 musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);

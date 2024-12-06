@@ -283,6 +283,7 @@
 			<destination>{d132e4af-1d9f-4dec-9201-f3809c310958}</destination>
 			<destination>{90a83649-e59b-42d4-821d-e31fd063aff9}</destination>
 			<destination>{8826935f-c5f3-4501-a6e9-4aaea0a6d9bc}</destination>
+			<destination>{f7d3595a-991f-4b16-b57b-b895f3d7dc74}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{774815d1-2d94-46a0-92ee-56529b80ce7a}">
@@ -3159,6 +3160,20 @@
 		</relationship>
 		<relationship name="markerTrack">
 			<destination>{3ec2e1a6-5827-4bba-9c07-511c0fef006c}</destination>
+		</relationship>
+	</object>
+	<object class="NamedMarker" id="{f7d3595a-991f-4b16-b57b-b895f3d7dc74}">
+		<property name="position">
+			<value>54.857142857142861</value>
+		</property>
+		<property name="name">
+			<value>Cutscene</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{f40e36c7-d0a5-4901-a5d1-a29083162437}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{18bbfdf7-a7dc-4a6d-9a1d-694b8b1b54c9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{bf90ad3f-a9c5-4770-9539-00bad3c17792}">

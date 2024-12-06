@@ -9,11 +9,15 @@ public class FishDestroyer : MonoBehaviour
     public Animator lobsterAnimator;
     private GameObject localFish;
 
+    [SerializeField]
+    private GameObject miss;
+
     public UnityEvent attacked;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         lobsterAnimator.Play("Attacked");
+        Instantiate(miss);
         if (collision.gameObject.CompareTag("Fish"))
         {
             localFish = collision.gameObject;

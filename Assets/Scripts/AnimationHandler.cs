@@ -9,6 +9,8 @@ public class AnimationHandler : MonoBehaviour
 
     private bool hitDown = true;
 
+    private GameObject scene1;
+
     // Update is called once per frame
     void Update()
     {
@@ -20,19 +22,37 @@ public class AnimationHandler : MonoBehaviour
 
     public void PlayAnimation()
     {
-        if (hitDown)
+        if (CompareTag("Lobster2"))
         {
-            lobsterAnimator.Play("HitUp");
-            hitDown = false;
+            lobsterAnimator.Play("Attack");
         }
-        else if (!hitDown){
-            lobsterAnimator.Play("HitDown");
-            hitDown = true;
+        else
+        {
+            if (hitDown)
+            {
+                lobsterAnimator.Play("HitUp");
+                hitDown = false;
+            }
+            else if (!hitDown){
+                lobsterAnimator.Play("HitDown");
+                hitDown = true;
+            }
         }
     }
 
-    public void ReturnIdle()
+    public void IdleDown()
+    {
+        lobsterAnimator.Play("IdleDown");
+    }
+
+    public void IdleUp()
+    {
+        lobsterAnimator.Play("IdleUp");
+    }
+
+    public void Idle()
     {
         lobsterAnimator.Play("Idle");
     }
+
 }

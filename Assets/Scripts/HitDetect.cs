@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor;
 
 public class HitDetect : MonoBehaviour
 {
@@ -12,8 +13,11 @@ public class HitDetect : MonoBehaviour
     private float tScore = 0.0f;
     public TMP_Text scoreText;
 
-    public 
+    [SerializeField]
+    private GameObject perfect;
 
+    [SerializeField]
+    private GameObject okay;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +38,15 @@ public class HitDetect : MonoBehaviour
                 fishHit = false;
                 Destroy(localFish);
                 score = (400f - (0.1f * Mathf.Pow(((float)timer - 60f), 2f)));
+
+                if (score >= 300f && score <= 400f)
+                {
+                    Instantiate(perfect);
+                }
+                else
+                {
+                    Instantiate(okay);
+                }
                 tScore += score;
                 StaticData.score = tScore;
                 timer = 0;
@@ -55,4 +68,5 @@ public class HitDetect : MonoBehaviour
             localFish = collision.gameObject;
         }
     }
+
 }

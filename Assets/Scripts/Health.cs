@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,10 +23,11 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        if(i  == 3){
+        if(i  == hearts.Count){
             alive = false;
-            Debug.Log("game over");
             Time.timeScale = 0f;
+            FMOD.Studio.Bus masterBus = RuntimeManager.GetBus("bus:/");
+            masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);            
             StaticData.won = false;
             SceneManager.LoadScene("End Scene");
         }
