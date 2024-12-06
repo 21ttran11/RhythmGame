@@ -6,6 +6,7 @@ public class BeatSpawner : MonoBehaviour
 {
     public Transform position;
     public GameObject beat;
+    public GameObject perpBeat;
 
     public FMODUnity.EventReference EventName;
     FMOD.Studio.EventInstance sfx;
@@ -22,5 +23,10 @@ public class BeatSpawner : MonoBehaviour
         sfx = FMODUnity.RuntimeManager.CreateInstance(EventName);
         Instantiate(beat, position);
         sfx.start();
+    }
+
+    public void SwitchPrefab()
+    {
+        beat = perpBeat;
     }
 }
