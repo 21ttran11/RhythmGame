@@ -498,7 +498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 352.695}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 479.75, y: 77.29991}
+  m_AnchoredPosition: {x: 479.75, y: 157.2999}
   m_SizeDelta: {x: 65.7513, y: 43.8222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!210 &162424401
@@ -1205,8 +1205,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tiffany Tran \n\nColleen Zheng\n\nAriana Renee Majerus\n\nEunice Kim\n\nMarcos\nEmily
-    Tsai\nJosue Cota\n\nAshe Kang"
+  m_text: "Tiffany Tran \n\nColleen Zheng\n\nAriana Renee Majerus\n\nEunice Kim\n\nMarcos
+    Garcia\nEmily Tsai\nJosue Cota\n\nAshe Kang\n\nMarcos Garcia"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85d684394616a66468f5c4aa1245f837, type: 2}
   m_sharedMaterial: {fileID: 8408219999220711767, guid: 85d684394616a66468f5c4aa1245f837, type: 2}
@@ -1688,7 +1688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -168}
+  m_AnchoredPosition: {x: 0, y: -120}
   m_SizeDelta: {x: 1009.7366, y: 770.0148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!210 &1307586087
@@ -1750,7 +1750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 357.867}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402.05, y: 89.89991}
+  m_AnchoredPosition: {x: 402.05, y: 159.89992}
   m_SizeDelta: {x: 65.7513, y: 43.8222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!210 &1494430829
@@ -1838,7 +1838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 357.867}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 470.05, y: 124.89991}
+  m_AnchoredPosition: {x: 470.05, y: 204.8999}
   m_SizeDelta: {x: 65.7513, y: 43.8222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!210 &1884007764
@@ -1926,7 +1926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 350.948}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 396.25, y: 139.50009}
+  m_AnchoredPosition: {x: 396.25, y: 209.5001}
   m_SizeDelta: {x: 65.7513, y: 43.8222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!210 &1944481453
@@ -2057,8 +2057,7 @@ MonoBehaviour:
     Artist
 
 
-
-'
+    Composer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85d684394616a66468f5c4aa1245f837, type: 2}
   m_sharedMaterial: {fileID: 8408219999220711767, guid: 85d684394616a66468f5c4aa1245f837, type: 2}
