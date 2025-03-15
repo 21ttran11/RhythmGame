@@ -63,12 +63,12 @@ public class Fishile : MonoBehaviour
         fish.AddTorque(torque);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Hitbox") || other.CompareTag("Claws")) //the lobster's claw/hitbox
-        {
-            fish_hit();
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Hitbox") || other.CompareTag("Claws")) //the lobster's claw/hitbox
+    //    {
+    //        fish_hit();
+    //    }
+    //}
 
 }

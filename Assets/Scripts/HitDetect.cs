@@ -45,7 +45,10 @@ public class HitDetect : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 fishHit = false;
-                Destroy(localFish);
+                Fishile fish = localFish.GetComponent<Fishile>();
+                fish.fish_hit();
+
+                // Destroy(localFish); //instead of destroying, call spinout function
                 score = (400f - (0.1f * Mathf.Pow(((float)timer - 60f), 2f)));
 
                 if (score >= 300f && score <= 400f)
