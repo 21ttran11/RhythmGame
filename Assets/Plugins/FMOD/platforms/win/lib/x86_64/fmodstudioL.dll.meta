@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 522907c44b986d64e8b8c36d986c79aa
+guid: 8c771fd632bc60f4783f622a88ab916c
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -14,20 +14,11 @@ PluginImporter:
   - first:
       Any: 
     second:
-<<<<<<< HEAD
-      enabled: 1
-=======
       enabled: 0
->>>>>>> JosuesCreditScene
       settings: {}
   - first:
       Editor: Editor
     second:
-<<<<<<< HEAD
-      enabled: 0
-      settings:
-        DefaultValueInitialized: true
-=======
       enabled: 1
       settings:
         CPU: x86_64
@@ -36,9 +27,8 @@ PluginImporter:
   - first:
       Standalone: Win64
     second:
-      enabled: 0
+      enabled: 1
       settings: {}
->>>>>>> JosuesCreditScene
   userData: 
   assetBundleName: 
   assetBundleVariant: 
