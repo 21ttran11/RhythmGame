@@ -34,6 +34,8 @@ public class Fishile : MonoBehaviour
 
         speed = distance / beatsPerSecond;
 
+        fish.drag = 0.006f; //drag slows down the obj -> reduce drag value for faster spin out
+
         //add spin out animations to list
         spin_outs.Add(() => spin_effect(300f));
         spin_outs.Add(() => spin_effect(-300f));
@@ -63,8 +65,10 @@ public class Fishile : MonoBehaviour
 
     private void spin_effect(float torque) //torque = force to rotate/spin the fish
     {
-        fish.AddForce(new Vector2(Random.Range(-2f, 2f), Random.Range(2f, 5f)), ForceMode2D.Impulse);
-        fish.AddTorque(torque);
+        //increased force -> stronger upward lanuch
+        //decreased the range -> none of the fish spin out too slow
+        fish.AddForce(new Vector2(Random.Range(-4f, 4f), Random.Range(6f, 8f)), ForceMode2D.Impulse);
+        fish.AddTorque(torque * 3f); //make the spin force stronger x3
     }
 
     //void OnTriggerEnter2D(Collider2D other)

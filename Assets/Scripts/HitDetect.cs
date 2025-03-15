@@ -47,6 +47,8 @@ public class HitDetect : MonoBehaviour
                 fishHit = false;
                 Fishile fish = localFish.GetComponent<Fishile>();
                 fish.fish_hit();
+                Object.Destroy(fish); //destroy after calling the spin out
+                Debug.Log("bye fish");
 
                 // Destroy(localFish); //instead of destroying, call spinout function
                 score = (400f - (0.1f * Mathf.Pow(((float)timer - 60f), 2f)));
