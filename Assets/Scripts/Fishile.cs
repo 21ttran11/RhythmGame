@@ -11,6 +11,8 @@ public class Fishile : MonoBehaviour
     private float distance;
     private Rigidbody2D fish;
 
+    private Collider2D fishCollider;
+
     [SerializeField]
     private float beatsPerMinute;
 
@@ -22,6 +24,7 @@ public class Fishile : MonoBehaviour
     void Start()
     {
         fish = GetComponent<Rigidbody2D>();
+        fishCollider = GetComponent<Collider2D>();
 
         hitbox = GameObject.FindWithTag("Hitbox").transform;
         claws = GameObject.FindWithTag("Claws").transform;
@@ -53,6 +56,7 @@ public class Fishile : MonoBehaviour
 
     public void fish_hit()
     {
+        fishCollider.enabled = false;
         int i = Random.Range(0, spin_outs.Count);
         spin_outs[i].Invoke();
     }
