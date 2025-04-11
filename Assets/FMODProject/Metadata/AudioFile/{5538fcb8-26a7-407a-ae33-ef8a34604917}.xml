@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{5538fcb8-26a7-407a-ae33-ef8a34604917}">
 		<property name="assetPath">
 			<value>spawn_sfx.mp3</value>
