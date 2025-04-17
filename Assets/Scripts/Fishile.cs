@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.Scripting.APIUpdating;
 
 public class Fishile : MonoBehaviour
@@ -10,6 +12,8 @@ public class Fishile : MonoBehaviour
     private Transform claws;
     private float distance;
     private Rigidbody2D fish;
+    private Light2D pulsarLight;
+    private bool hit = false;
 
     private Collider2D fishCollider;
 
@@ -25,6 +29,10 @@ public class Fishile : MonoBehaviour
     {
         fish = GetComponent<Rigidbody2D>();
         fishCollider = GetComponent<Collider2D>();
+        if (gameObject.name == "FishilePerp(Clone)")
+        {
+            pulsarLight = GetComponent<Light2D>();
+        }
 
         hitbox = GameObject.FindWithTag("Hitbox").transform;
         claws = GameObject.FindWithTag("Claws").transform;
@@ -46,7 +54,10 @@ public class Fishile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!hit)
+        {
         Move();
+        }
     }
 
     public void Move()
@@ -58,9 +69,11 @@ public class Fishile : MonoBehaviour
 
     public void fish_hit()
     {
+        hit = true;
         fishCollider.enabled = false;
         int i = Random.Range(0, spin_outs.Count);
         spin_outs[i].Invoke();
+        StartCoroutine(DestroyFish());
     }
 
     private void spin_effect(float torque) //torque = force to rotate/spin the fish
@@ -69,6 +82,37 @@ public class Fishile : MonoBehaviour
         //decreased the range -> none of the fish spin out too slow
         fish.AddForce(new Vector2(Random.Range(-4f, 4f), Random.Range(6f, 8f)), ForceMode2D.Impulse);
         fish.AddTorque(torque * 3f); //make the spin force stronger x3
+    }
+    private IEnumerator DestroyFish()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject);
+    }
+    public IEnumerator PulseLight()
+    {
+        bool progress = false;
+        while (true)
+        {
+            if (!progress)
+            {
+                pulsarLight.intensity += .2f;
+                if (pulsarLight.intensity >= 1f)
+                {
+                    pulsarLight.intensity = 1f;
+                    progress = true;
+                }
+            } else
+            {
+                pulsarLight.intensity -= .05f;
+                if (pulsarLight.intensity <= 0f)
+                {
+                    pulsarLight.intensity = 0f;
+                    break;
+                }
+            }
+
+            yield return new WaitForSeconds(.01f);
+        }
     }
 
     //void OnTriggerEnter2D(Collider2D other)

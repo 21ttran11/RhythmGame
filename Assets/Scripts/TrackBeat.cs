@@ -2,6 +2,7 @@ using FMODUnity;
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ScriptUsageTimeline : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class ScriptUsageTimeline : MonoBehaviour
     private BeatSpawner beatSpawner;
 
     public GameObject win;
+    public Light2D globalLight;
 
     FMOD.Studio.EVENT_CALLBACK beatCallback;
     FMOD.Studio.EventInstance musicInstance;
@@ -122,6 +124,16 @@ public class ScriptUsageTimeline : MonoBehaviour
             case "Cutscene": //if marker is cutscene
                 Debug.Log("Cut scene trigger"); //trigger the cutscene
                 cutscene.SetActive(true);
+                break;
+            case "Dark":
+                globalLight.intensity = 0.03f;
+                break;
+            case "unDark":
+                globalLight.intensity = 1f;
+                break;
+            case "Flash":
+                beatSpawner.Pulse();
+                Debug.Log("Pulse!");
                 break;
             case "Stop":
                 musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
