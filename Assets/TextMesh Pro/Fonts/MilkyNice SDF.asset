@@ -60,9 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: MilkyNice SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -248193622
   material: {fileID: 4218572199818014734}
-  materialHashCode: 0
+  materialHashCode: 1297025354
   m_Version: 1.1.0
   m_SourceFontFileGUID: 89d7f4e2ea7f0d844b8d85e2ca7c1ab3
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 89d7f4e2ea7f0d844b8d85e2ca7c1ab3, type: 3}
@@ -2743,9 +2743,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0
+    - _ScaleRatioB: 0
+    - _ScaleRatioC: 0
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
