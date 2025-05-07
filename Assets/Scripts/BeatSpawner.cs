@@ -25,6 +25,21 @@ public class BeatSpawner : MonoBehaviour
         sfx.start();
     }
 
+    public void Pulse()
+    {
+        foreach (Transform child in transform)
+        {
+            Debug.Log(child.name);
+            if (child.name == "FishilePerp(Clone)")
+            {
+                if (child.gameObject.TryGetComponent<Fishile>(out var fishileClass))
+                {
+                StartCoroutine(fishileClass.PulseLight());
+                }
+            }
+        }
+    }
+
     public void SwitchPrefab()
     {
         beat = perpBeat;
