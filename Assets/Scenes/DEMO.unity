@@ -2419,7 +2419,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.67775464, y: 0}
+  m_Offset: {x: 0.10880247, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2430,7 +2430,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3555088, y: 1}
+  m_Size: {x: 1.2176046, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &759684757
 GameObject:
@@ -5981,14 +5981,14 @@ SceneRoots:
   m_Roots:
   - {fileID: 1156926640}
   - {fileID: 106329388}
-  - {fileID: 57727849}
   - {fileID: 564630054}
   - {fileID: 643746129}
   - {fileID: 281616838}
   - {fileID: 1210961989}
   - {fileID: 384841176}
   - {fileID: 212879025}
-  - {fileID: 321322913}
+  - {fileID: 301833681}
+  - {fileID: 57727849}
   - {fileID: 1047058856}
   - {fileID: 1607260930}
-  - {fileID: 301833681}
+  - {fileID: 321322913}
