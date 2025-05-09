@@ -24,7 +24,7 @@ public class BeatSpawner : MonoBehaviour
         sfx = FMODUnity.RuntimeManager.CreateInstance(EventName);
         if (animator != null)
         {
-            animator.Play("Throw");
+            animator.Play("Throw", -1, 0f);
         }
         Instantiate(beat, position);
         sfx.start();
