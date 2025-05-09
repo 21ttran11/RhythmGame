@@ -6,6 +6,8 @@ public class BeatSpawner : MonoBehaviour
 {
     public Transform position;
     public GameObject beat;
+
+    public Animator animator; 
     public GameObject perpBeat;
 
     public FMODUnity.EventReference EventName;
@@ -17,10 +19,13 @@ public class BeatSpawner : MonoBehaviour
         EventName = FMODUnity.EventReference.Find("event:/SpawnSFX");
     }
 #endif
-    // Update is called once per frame
     public void Spawn()
     {
         sfx = FMODUnity.RuntimeManager.CreateInstance(EventName);
+        if (animator != null)
+        {
+            animator.Play("Throw");
+        }
         Instantiate(beat, position);
         sfx.start();
     }

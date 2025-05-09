@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8250823607136868057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Stage2BeatMap
+  m_EditorClassIdentifier: 
+  Path: event:/Stage2BeatMap
+  Guid:
+    Data1: 1190444560
+    Data2: 1229833771
+    Data3: 1990120845
+    Data4: 269918592
+  Banks:
+  - {fileID: 156869398938411658}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 147458
 --- !u!114 &-3502195618784033538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: Assets/FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638777625030223151
+  lastModified: 638823402739985475
   FileSizes:
   - Name: Desktop
-    Value: 902
+    Value: 956
   Exists: 1
 --- !u!114 &-3315756913436158910
 MonoBehaviour:
@@ -66,12 +93,13 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -3315756913436158910}
   - {fileID: 6072077062275006878}
+  - {fileID: -8250823607136868057}
   EditorParameters: []
   MasterBanks:
   - {fileID: 156869398938411658}
   StringsBanks:
   - {fileID: -3502195618784033538}
-  cacheTime: 638777625030223151
+  cacheTime: 638823402740065427
   cacheVersion: 131623
 --- !u!114 &156869398938411658
 MonoBehaviour:
@@ -88,10 +116,10 @@ MonoBehaviour:
   Path: Assets/FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638777625030153134
+  lastModified: 638823402739955624
   FileSizes:
   - Name: Desktop
-    Value: 2146688
+    Value: 4135776
   Exists: 1
 --- !u!114 &6072077062275006878
 MonoBehaviour:
@@ -135,7 +163,7 @@ MonoBehaviour:
   Path: Assets/FMODProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638757736341904714
+  lastModified: 638823402740065427
   FileSizes:
   - Name: Desktop
     Value: 3232

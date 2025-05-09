@@ -16,7 +16,11 @@ public class FishDestroyer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        lobsterAnimator.Play("Attacked");
+        if(lobsterAnimator != null)
+        {
+            lobsterAnimator.Play("Attacked");
+        }
+
         Instantiate(miss);
         if (collision.gameObject.CompareTag("Fish"))
         {

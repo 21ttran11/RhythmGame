@@ -9,6 +9,7 @@ TagManager:
   - Claws
   - Fish
   - Lobster2
+  - Body
   layers:
   - Default
   - TransparentFX

@@ -119,6 +119,11 @@ public class ScriptUsageTimeline : MonoBehaviour
         switch(markerName)
         {
             case "SpawnBeat": //if the marker name is spawnbeat
+                Debug.Log("spawn beat");
+                beatSpawner.Spawn(); //beat spawner 
+                break;
+            case "Spawn": //if the marker name is spawnbeat
+                Debug.Log("spawn beat");
                 beatSpawner.Spawn(); //beat spawner 
                 break;
             case "Cutscene": //if marker is cutscene
